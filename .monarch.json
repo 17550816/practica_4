@@ -1,4 +1,4 @@
-//.monarch.json
+//.mocharc.json
 {
   "diff": true,
   "recursive": true,
@@ -9,4 +9,3 @@
   "color": true,
   "exit": true
 }
-

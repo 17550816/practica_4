@@ -10,9 +10,11 @@ describe('GET /usuarios endpoint', () => {
       .get('/usuarios')
       .then((response) => {
         expect(response.statusCode).to.equal(200)
-        expect(response.text).to.equal('You have hit GET /usuarios endpoint')
-
+        expect(response.body)
+          .to.be.an.instanceof(Array)
+          .and.to.have.length(4)
+          .and.to.have.property(0)
+          .that.includes.all.keys(['id', 'correo', 'clave'])
       })
   })
 })
-
